@@ -135,6 +135,9 @@ main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
+    // Enable sticky keys
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, GLFW_TRUE);
+
     glfwMakeContextCurrent(window);
 
     printf("OpenGL Vendor:   %s\n", glGetString(GL_VENDOR));
