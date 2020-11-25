@@ -13,13 +13,13 @@ CFLAGS += -Wno-unused-parameter -Wno-unused-result -Wno-unused-function
 CFLAGS += -Isrc/ -Ivendor/include/
 LDFLAGS = -mwindows
 LDLIBS  = -lmingw32
-LDLIBS += vendor/lib64/mingw/libglfw3.a
+LDLIBS += vendor/lib64/windows/libglfw3.a
 LDLIBS += -lgdi32 -limm32 -lole32 -loleaut32
 LDLIBS += -lopengl32 -lsetupapi -lversion -lwinmm
 
 
 # Build the main executable
-demo.exe: src/main.c src/opengl.c src/opengl.h vendor/lib64/mingw/libglfw3.a
+demo.exe: src/main.c src/opengl.c src/opengl.h vendor/lib64/windows/libglfw3.a
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ src/main.c src/opengl.c $(LDLIBS)
 
 
