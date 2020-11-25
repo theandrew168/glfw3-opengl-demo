@@ -120,7 +120,6 @@ main(int argc, char* argv[])
         glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
     }
 
-    // TODO: this doesn't work on Windows
     glfwWindowHint(GLFW_RESIZABLE, resizable ? GLFW_TRUE : GLFW_FALSE);
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -201,7 +200,17 @@ main(int argc, char* argv[])
     unsigned long last_second = 0;
     double angle = 0.0;
 
+    // Set the OpenGL viewport size
+    int width, height;
+    glfwGetWindowSize(window, &width, &height);
+    glViewport(0, 0, width, height);
+
+    // Loop til exit or ESCAPE key
     while (!glfwWindowShouldClose(window)) {
+        if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+            glfwSetWindowShouldClose(window, GLFW_TRUE);
+        }
+
         glClearColor(0.15f, 0.15f, 0.15f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
