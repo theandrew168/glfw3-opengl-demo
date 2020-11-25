@@ -25,11 +25,11 @@ make -f Makefile.macos
 From Linux (Debian-based):
 ```
 sudo apt install make mingw-w64
-make -f Makefile.mingw
+make -f Makefile.windows
 ```
 
 From macOS:
 ```
 brew install make mingw-w64
-make -f Makefile.mingw
+make -f Makefile.windows
 ```
