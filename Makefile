@@ -11,7 +11,7 @@ CFLAGS += -Wall -Wextra -Wpedantic
 CFLAGS += -Wno-unused-parameter -Wno-unused-result -Wno-unused-function
 CFLAGS += -Isrc/ -Ivendor/include/
 LDFLAGS =
-LDLIBS  = -lGL -lglfw3
+LDLIBS  = -lGL -lglfw
 
 
 # Build the main executable
