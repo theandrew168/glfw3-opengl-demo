@@ -11,7 +11,7 @@ For Windows builds, [mingw-w64](http://mingw-w64.org/doku.php) is used to cross-
 
 ### Linux (Native, Debian-based)
 ```
-sudo apt install make libglfw3-dev
+sudo apt install gcc make libglfw3-dev
 make
 ```
 
@@ -24,7 +24,7 @@ make -f Makefile.macos
 ### Windows (Cross-Compile)
 From Linux (Debian-based):
 ```
-sudo apt install build-essential mingw-w64
+sudo apt install make mingw-w64
 make -f Makefile.mingw
 ```
 
