@@ -17,7 +17,7 @@ make
 
 ### macOS (Native)
 ```
-brew install make glfw
+brew install make
 make -f Makefile.macos
 ```
 
