@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 #include <GL/glcorearb.h>
-#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
 #include "opengl.h"

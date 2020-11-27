@@ -14,6 +14,11 @@
 // More info about dynamic loading can be found here:
 // https://en.wikipedia.org/wiki/Dynamic_loading
 #define OPENGL_FUNCTIONS                                                            \
+    OPENGL_FUNCTION(glGetString, PFNGLGETSTRINGPROC)                                \
+    OPENGL_FUNCTION(glViewport, PFNGLVIEWPORTPROC)                                  \
+    OPENGL_FUNCTION(glClear, PFNGLCLEARPROC)                                        \
+    OPENGL_FUNCTION(glClearColor, PFNGLCLEARCOLORPROC)                              \
+    OPENGL_FUNCTION(glDrawArrays, PFNGLDRAWARRAYSPROC)                              \
     OPENGL_FUNCTION(glCreateShader, PFNGLCREATESHADERPROC)                          \
     OPENGL_FUNCTION(glDeleteShader, PFNGLDELETESHADERPROC)                          \
     OPENGL_FUNCTION(glAttachShader, PFNGLATTACHSHADERPROC)                          \

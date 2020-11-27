@@ -6,16 +6,15 @@
 # Declare compiler tools and flags
 CC      = x86_64-w64-mingw32-gcc
 CFLAGS  = -std=c99
-CFLAGS += -D__USE_MINGW_ANSI_STDIO
 CFLAGS += -fPIC -g -Og
+CFLAGS += -D__USE_MINGW_ANSI_STDIO
+CFLAGS += -DGLFW_INCLUDE_NONE
 CFLAGS += -Wall -Wextra -Wpedantic
 CFLAGS += -Wno-unused-parameter -Wno-unused-result -Wno-unused-function
 CFLAGS += -Isrc/ -Ivendor/include/
 LDFLAGS = -mwindows
-LDLIBS  = -lmingw32
+LDLIBS  = -lmingw32 -lgdi32 -lopengl32
 LDLIBS += vendor/lib64/windows/libglfw3.a
-LDLIBS += -lgdi32 -limm32 -lole32 -loleaut32
-LDLIBS += -lopengl32 -lsetupapi -lversion -lwinmm
 
 
 # Build the main executable

@@ -7,6 +7,7 @@
 CC      = cc
 CFLAGS  = -std=c99
 CFLAGS += -fPIC -g -Og
+CFLAGS += -DGLFW_INCLUDE_NONE
 CFLAGS += -Wall -Wextra -Wpedantic
 CFLAGS += -Wno-unused-parameter -Wno-unused-result -Wno-unused-function
 CFLAGS += -Isrc/ -Ivendor/include/

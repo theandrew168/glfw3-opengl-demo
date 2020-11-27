@@ -138,18 +138,19 @@ main(int argc, char* argv[])
     // Enable sticky keys
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GLFW_TRUE);
 
+    // Make the OpenGL context current
     glfwMakeContextCurrent(window);
-
-    printf("OpenGL Vendor:   %s\n", glGetString(GL_VENDOR));
-    printf("OpenGL Renderer: %s\n", glGetString(GL_RENDERER));
-    printf("OpenGL Version:  %s\n", glGetString(GL_VERSION));
-    printf("GLSL Version:    %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
 
     // Enable v-sync (set 1 to enable, 0 to disable)
     glfwSwapInterval(vsync ? 1 : 0);
 
     // Load the modern OpenGL funcs
     opengl_load_functions();
+
+    printf("OpenGL Vendor:   %s\n", glGetString(GL_VENDOR));
+    printf("OpenGL Renderer: %s\n", glGetString(GL_RENDERER));
+    printf("OpenGL Version:  %s\n", glGetString(GL_VERSION));
+    printf("GLSL Version:    %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
 
 
     // Do modern OpenGL stuff
