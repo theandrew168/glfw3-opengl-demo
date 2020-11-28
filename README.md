@@ -9,22 +9,40 @@ This project is built using POSIX-compatible [make](https://pubs.opengroup.org/o
 For unix-like systems, it can be built natively.
 For Windows builds, [mingw-w64](http://mingw-w64.org/doku.php) is used to cross-compile the project from a unix-like system.
 
-### Linux (Native, Debian-based)
+### Linux
 ```
+# debian-based
 sudo apt install gcc make libglfw3-dev
+
+# RHEL-based
+sudo dnf install gcc make glfw-devel
+
+# arch-based
+sudo pacman -Syu gcc make glfw-x11
+
 make
 ```
 
-### macOS (Native)
+### macOS
 ```
 brew install make
 make -f Makefile.macos
 ```
 
-### Windows (Cross-Compile)
-From Linux (Debian-based):
+### Windows
+Windows binaries are cross-compiled from Linux or macOS.
+
+From Linux:
 ```
+# debian-based
 sudo apt install make mingw-w64
+
+# RHEL-based
+sudo dnf install make mingw64-gcc
+
+# arch-based
+sudo pacman -Syu make mingw-w64
+
 make -f Makefile.windows
 ```
 
